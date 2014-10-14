@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width')
+    title KALKULATOR
+    link(href='css/ionic.app.css', rel='stylesheet')
+    script(src='lib/ionic/js/ionic.bundle.js')
+    script(src='cordova.js')
+    script(src='js/app.js')
+    script(src='js/main_controller.js')
+  body(ng-app='nv-calculator', ng-controller='MainCtrl')
+    .bar.bar-header.bar-calm
+      h1.title KALKULATOR
+    ion-content.has-header
+      .display {{display}}
+      .button-bar
+        a.button(ng-click='addDisplay(7)') 7
+        a.button(ng-click='addDisplay(8)') 8
+        a.button(ng-click='addDisplay(9)') 9
+        a.button +
+      .button-bar
+        a.button(ng-click='addDisplay(4)') 4
+        a.button(ng-click='addDisplay(5)') 5
+        a.button(ng-click='addDisplay(6)') 6
+        a.button -
+      .button-bar
+        a.button(ng-click='addDisplay(1)') 1
+        a.button(ng-click='addDisplay(2)') 2
+        a.button(ng-click='addDisplay(3)') 3
+        a.button *
+      .button-bar
+        a.button(ng-click='addDisplay(0)') 0
+        a.button(ng-click='addDisplay(".")') .
+        a.button =
+        a.button /
+    .bar.bar-footer.bar-balanced
+      .title
